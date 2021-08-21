@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+      <img id="sky" src="./sky.jpg">
+    <a-scene>
+        <a-sky src="./images/50338554-night-sky-milky-way-galaxy-background.jpg"></a-sky>
+        <a-a-assets timeout="1000">
+            <a-asset-item id="bench" src="./bench/scene.gltf"></a-asset-item>
+            <a-asset-item id="street" src="./street/scene.gltf"></a-asset-item>
+            <a-asset-item id="lamp" src="./lamp/scene.gltf"></a-asset-item>
+            <a-asset-item id="fox" src="./fox_queen/scene.gltf"></a-asset-item>
+            <a-asset-item id="girl" src="./girl/scene.gltf"></a-asset-item>
+        </a-a-assets>
+        <a-entity>
+            <a-entity scale="0.1 0.1 0.1" gltf-model="#girl" position="0 2 -47" shadow="cast:true" rotation="0 0 0"></a-entity>
+        </a-entity>
+        <a-entity>
+            <a-entity scale="1.57 1.57 1.57" gltf-model="#bench" position="1 2 -56" shadow="cast:true" ></a-entity>
+        </a-entity>
+        <a-entity>
+            <a-entity scale="1 1 1" gltf-model="#lamp" position="-21 2 -58.5" shadow="cast:true" ></a-entity>
+        </a-entity>
+        <a-entity>
+            <a-entity scale="0.1 0.1 0.1" rotation="0 90 0" gltf-model="#street" position="-110 0 130" shadow="cast:true" ></a-entity>
+        </a-entity>
+        <a-entity>
+            <a-entity scale="1 1 1" gltf-model="#fox" position="17 2 -46" rotation="0 0 0" shadow="cast:true"></a-entity>
+        </a-entity>
+        <a-entity light="type: point; castShadow: true; color:#e6ca14; intensity:2.35" position="-5.92951 8.39487 1.2943"></a-entity>
+        <a-entity light="type:ambient;"></a-entity>
+        <a-camera position="0 8 0"></a-camera>
+    </a-scene>
+  </body>
+</html>
